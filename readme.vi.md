@@ -150,6 +150,20 @@ Sau đó bạn có thể chạy:
 copy-clean
 ```
 
+## Demo
+```
+🔍 Đang scan...
+
+📦 Tổng số file sẽ copy: 19416
+🚫 Exclude folders: [".git", "node_modules", "dist"]
+
+Tiến hành copy? (y/n): y
+
+⏳ Copying files...
+█████████████████████████████████████████ 100%
+✅ Hoàn tất!
+```
+
 ## Thông tin kỹ thuật
 
 - **Ngôn ngữ**: Rust
