@@ -1,8 +1,10 @@
 # Copy Without Folder
 
-Công cụ dòng lệnh đơn giản để sao chép file từ thư mục nguồn sang thư mục đích với khả năng loại trừ các thư mục không mong muốn. Chương trình sẽ hướng dẫn bạn từng bước một cách tương tác.
+A simple command-line tool for copying files from source directory to destination directory with the ability to exclude unwanted folders. The program guides you through the process step by step with an interactive interface.
 
-## Cài đặt
+🌍 **[Vietnamese Version](readme.vi.md)**
+
+## Installation
 
 ```bash
 # Clone repository  
@@ -13,176 +15,176 @@ cd copy-without-folder
 cargo build --release
 ```
 
-## Sử dụng
+## Usage
 
-### Chạy chương trình
+### Run the program
 
 ```bash
 cargo run
 ```
 
-Chương trình sẽ yêu cầu bạn nhập:
+The program will prompt you to enter:
 
-1. **Thư mục nguồn**: Đường dẫn đến thư mục chứa file cần sao chép
-2. **Thư mục đích**: Đường dẫn đến nơi muốn lưu file đã sao chép  
-3. **Thư mục loại trừ**: Danh sách các thư mục không muốn sao chép (phân cách bằng dấu phẩy)
+1. **Source folder**: Path to the directory containing files to copy
+2. **Destination folder**: Path to where you want to save the copied files  
+3. **Exclude folders**: List of folders you don't want to copy (comma-separated)
 
-### Ví dụ sử dụng thực tế
+### Real-world usage example
 
-#### Khi chạy chương trình:
+#### When running the program:
 
 ```
-Nhập folder source: /home/user/my-project
-Nhập folder destination: /home/user/backup
-Nhập tên folder cần loại trừ (phân cách bởi dấu ,): node_modules, .git, target
-🔍 Đang scan...
-📦 Tổng số file sẽ copy: 1250
+Enter source folder: /home/user/my-project
+Enter destination folder: /home/user/backup
+Enter folder names to exclude (comma-separated): node_modules, .git, target
+🔍 Scanning...
+📦 Total files to copy: 1250
 🚫 Exclude folders: ["node_modules", ".git", "target"]
 ⚠️ Total excluded: 15000
-Tiến hành copy? (y/n): y
+Proceed with copy? (y/n): y
 ```
 
-Sau đó chương trình sẽ hiển thị progress bar và tiến hành sao chép.
+Then the program will display a progress bar and proceed with copying.
 
-## Tính năng
+## Features
 
-- ✅ Giao diện tương tác thân thiện với người dùng
-- ✅ Scan và đếm số lượng file trước khi sao chép
-- ✅ Sao chép tất cả file từ thư mục nguồn
-- ✅ Tạo cấu trúc thư mục tự động ở đích
-- ✅ Loại trừ nhiều thư mục cùng lúc (phân cách bằng dấu phẩy)
-- ✅ Progress bar hiển thị tiến độ với emoji và thống kê chi tiết
-- ✅ Xử lý lỗi và thông báo chi tiết
-- ✅ Xác nhận trước khi tiến hành copy
+- ✅ User-friendly interactive interface
+- ✅ Scan and count files before copying
+- ✅ Copy all files from source directory
+- ✅ Automatically create directory structure at destination
+- ✅ Exclude multiple folders at once (comma-separated)
+- ✅ Progress bar with emoji and detailed statistics
+- ✅ Detailed error handling and notifications
+- ✅ Confirmation prompt before copying
 
-## Cách hoạt động
+## How it works
 
-1. **Scan giai đoạn 1**: Chương trình sẽ duyệt qua toàn bộ thư mục nguồn để:
-   - Đếm tổng số file sẽ được copy
-   - Xác định số lượng file/thư mục bị loại trừ
-   - Hiển thị thống kê chi tiết
+1. **Phase 1 Scan**: The program will traverse the entire source directory to:
+   - Count total files to be copied
+   - Identify number of excluded files/folders
+   - Display detailed statistics
 
-2. **Xác nhận**: Yêu cầu người dùng xác nhận trước khi thực hiện copy
+2. **Confirmation**: Ask user for confirmation before proceeding with copy
 
-3. **Thực hiện copy**: Sao chép từng file với progress bar hiển thị tiến độ
+3. **Execute Copy**: Copy each file with progress bar showing progress
 
-## Loại trừ thư mục
+## Folder Exclusion
 
-Chương trình sẽ loại trừ:
-- Toàn bộ thư mục có tên khớp với danh sách loại trừ
-- Tất cả file và thư mục con bên trong các thư mục bị loại trừ
-- Tìm kiếm theo tên chính xác (case-sensitive)
+The program will exclude:
+- All folders with names matching the exclusion list
+- All files and subfolders within excluded folders
+- Search by exact name match (case-sensitive)
 
-### Ví dụ về loại trừ
+### Exclusion Examples
 
-Nếu bạn nhập: `node_modules, .git, target, build`
+If you enter: `node_modules, .git, target, build`
 
-Chương trình sẽ bỏ qua:
-- `./node_modules/` và tất cả nội dung bên trong
-- `./frontend/node_modules/` và tất cả nội dung bên trong  
-- `./.git/` và tất cả nội dung bên trong
-- `./rust-project/target/` và tất cả nội dung bên trong
-- `./cpp-project/build/` và tất cả nội dung bên trong
+The program will skip:
+- `./node_modules/` and all contents inside
+- `./frontend/node_modules/` and all contents inside  
+- `./.git/` and all contents inside
+- `./rust-project/target/` and all contents inside
+- `./cpp-project/build/` and all contents inside
 
-## Lưu ý quan trọng
+## Important Notes
 
-1. **Thư mục nguồn phải tồn tại**: Chương trình sẽ báo lỗi nếu không tìm thấy thư mục nguồn.
+1. **Source directory must exist**: Program will error if source directory is not found.
 
-2. **Thư mục đích được tạo tự động**: Nếu thư mục đích chưa tồn tại, chương trình sẽ tạo tự động khi cần thiết.
+2. **Destination directory created automatically**: If destination directory doesn't exist, it will be created automatically when needed.
 
-3. **Loại trừ theo tên chính xác**: Chương trình sẽ loại trừ tất cả thư mục có tên khớp chính xác với danh sách đã nhập.
+3. **Exclude by exact name match**: Program will exclude all folders with names exactly matching the entered list.
 
-4. **Ghi đè file**: File đã tồn tại ở thư mục đích sẽ bị ghi đè không cần hỏi.
+4. **File overwriting**: Existing files in destination directory will be overwritten without asking.
 
-5. **Hiệu suất**: Chương trình scan 2 lần - lần đầu để đếm, lần hai để copy. Điều này đảm bảo progress bar chính xác.
+5. **Performance**: Program scans twice - first to count, second to copy. This ensures accurate progress bar.
 
-## Các trường hợp sử dụng phổ biến
+## Common Use Cases
 
-### Backup dự án web (loại trừ node_modules)
+### Backup web project (exclude node_modules)
 ```
-Nhập folder source: ./my-web-project
-Nhập folder destination: ./backup/web-project-backup
-Nhập tên folder cần loại trừ: node_modules, .git, dist, build
-```
-
-### Backup dự án Rust (loại trừ target)
-```
-Nhập folder source: ./my-rust-project  
-Nhập folder destination: ./backup/rust-project-backup
-Nhập tên folder cần loại trừ: target, .git
+Enter source folder: ./my-web-project
+Enter destination folder: ./backup/web-project-backup
+Enter folder names to exclude: node_modules, .git, dist, build
 ```
 
-### Backup dự án đa ngôn ngữ
+### Backup Rust project (exclude target)
 ```
-Nhập folder source: ./monorepo-project
-Nhập folder destination: ./backup/monorepo-backup
-Nhập tên folder cần loại trừ: node_modules, target, build, dist, .git, __pycache__, venv
-```
-
-### Copy thư mục media (không loại trừ gì)
-```
-Nhập folder source: ./photos-2024
-Nhập folder destination: ./backup/photos-2024
-Nhập tên folder cần loại trừ: (để trống, nhấn Enter)
+Enter source folder: ./my-rust-project  
+Enter destination folder: ./backup/rust-project-backup
+Enter folder names to exclude: target, .git
 ```
 
-## Build và chạy executable
+### Backup multi-language project
+```
+Enter source folder: ./monorepo-project
+Enter destination folder: ./backup/monorepo-backup
+Enter folder names to exclude: node_modules, target, build, dist, .git, __pycache__, venv
+```
 
-### Build bản release
+### Copy media folder (no exclusions)
+```
+Enter source folder: ./photos-2024
+Enter destination folder: ./backup/photos-2024
+Enter folder names to exclude: (leave empty, press Enter)
+```
+
+## Build and Run Executable
+
+### Build release version
 ```bash
 cargo build --release
 ```
 
-### Chạy executable trực tiếp
+### Run executable directly
 ```bash
 ./target/release/copy-without-folder
 ```
 
-### Tạo alias để sử dụng dễ dàng (tùy chọn)
+### Create alias for easy usage (optional)
 
-Thêm vào `~/.bashrc` hoặc `~/.zshrc`:
+Add to `~/.bashrc` or `~/.zshrc`:
 ```bash
 alias copy-clean="/path/to/your/project/target/release/copy-without-folder"
 ```
 
-Sau đó bạn có thể chạy:
+Then you can run:
 ```bash
 copy-clean
 ```
 
-## Thông tin kỹ thuật
+## Technical Information
 
-- **Ngôn ngữ**: Rust
-- **Dependencies chính**:
-  - `walkdir`: Duyệt thư mục đệ quy
-  - `indicatif`: Progress bar và spinner
+- **Language**: Rust
+- **Main Dependencies**:
+  - `walkdir`: Recursive directory traversal
+  - `indicatif`: Progress bar and spinner
 - **Platform**: Cross-platform (Windows, macOS, Linux)
-- **Hiệu suất**: Tối ưu cho việc sao chép file lớn với progress tracking
+- **Performance**: Optimized for copying large files with progress tracking
 
 ## Troubleshooting
 
-### Lỗi permission denied
+### Permission denied error
 ```
-❌ Không thể copy /path/to/file: Permission denied (os error 13)
+❌ Cannot copy /path/to/file: Permission denied (os error 13)
 ```
-**Giải pháp**: Kiểm tra quyền đọc thư mục nguồn và quyền ghi thư mục đích.
+**Solution**: Check read permissions for source directory and write permissions for destination directory.
 
-### Thư mục nguồn không tồn tại
-Chương trình sẽ báo lỗi ngay khi bắt đầu scan. Kiểm tra lại đường dẫn đã nhập.
+### Source directory does not exist
+Program will error immediately when starting scan. Double-check the entered path.
 
-### Hết dung lượng đĩa
+### Disk space full
 ```
-❌ Không thể copy /path/to/file: No space left on device (os error 28)
+❌ Cannot copy /path/to/file: No space left on device (os error 28)
 ```
-**Giải pháp**: Giải phóng dung lượng đĩa hoặc chọn thư mục đích khác.
+**Solution**: Free up disk space or choose a different destination directory.
 
-## Đóng góp
+## Contributing
 
-1. Fork project này
-2. Tạo feature branch (`git checkout -b feature/AmazingFeature`)
+1. Fork this project
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Mở Pull Request
+5. Open Pull Request
 
 ## License
 
