@@ -1,0 +1,9 @@
+[package]
+name = "copy-without-folder"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+indicatif = '0.18.0'
+walkdir = '2.5.0'

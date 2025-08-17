@@ -1,0 +1,11 @@
+/Users/macbookpro/hdev/workspaces/Rust/copy-without-folder/target/debug/deps/libconsole-60809e1e3185446d.rmeta: /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/lib.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/common_term.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/kb.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/term.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/unix_term.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/utils.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/ansi.rs
+
+/Users/macbookpro/hdev/workspaces/Rust/copy-without-folder/target/debug/deps/console-60809e1e3185446d.d: /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/lib.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/common_term.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/kb.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/term.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/unix_term.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/utils.rs /Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/ansi.rs
+
+/Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/lib.rs:
+/Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/common_term.rs:
+/Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/kb.rs:
+/Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/term.rs:
+/Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/unix_term.rs:
+/Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/utils.rs:
+/Users/macbookpro/.cargo/registry/src/index.crates.io-6f17d22bba15001f/console-0.16.0/src/ansi.rs:
